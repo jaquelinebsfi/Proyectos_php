@@ -1,0 +1,17 @@
+<?php
+$numeros = array(10,4,3,50,23,90);
+
+if (count($numeros)>=3 && is_array($numeros)) {
+    $mayor=max($numeros);
+    unset($numeros[array_search($mayor,$numeros,$strict=true)]);
+    $mayor2=max($numeros);
+    unset($numeros[array_search($mayor2,$numeros,$strict=true)]);
+    $mayor3=max($numeros);
+
+    ECHO '[',$mayor,',', $mayor2,',', $mayor3,']';
+    
+}else {
+    echo "El array tiene menos de 3 elementos";
+}
+
+?>
